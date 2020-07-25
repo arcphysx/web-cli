@@ -1,0 +1,105 @@
+@import 'https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap';
+
+$base_color: #FFFFFF;
+$host_color: #66bb6a;
+$pwd_color: #039be5;
+$scope_color: $base_color;
+$link_color: #f57c00;
+$highlight_color: #ba68c8;
+
+#app_container{
+    height: calc(100vh - 56px);
+    padding: 0;
+
+    #cli_container{
+        background-color: #000000;
+        color: $base_color;
+        font-family: 'Ubuntu Mono', monospace;
+        padding: 1% 1.5%;
+
+        .text-host{
+            color: #388e3c;
+            font-weight: bold;
+        }
+        .text-host::after{
+            color: $base_color;
+            font-weight: normal;
+            content: ':';
+        }
+    
+        .text-pwd{
+            color: $pwd_color;
+            font-weight: normal;
+        }
+
+        .text-scope{
+            color: $scope_color;
+            font-weight: normal;
+        }
+
+        a{
+            color: $link_color;
+            text-decoration: none;
+        }
+
+        strong{
+            color: $highlight_color;
+            font-weight: bold;
+        }
+
+        #input_line{
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            -webkit-align-content: flex-start;
+            -ms-flex-line-pack: start;
+            align-content: flex-start;
+            -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+
+            span{
+                white-space: nowrap;
+                -webkit-order: 0;
+                -ms-flex-order: 0;
+                order: 0;
+                -webkit-flex: 0 1 auto;
+                -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+                -webkit-align-self: auto;
+                -ms-flex-item-align: auto;
+                align-self: auto;
+            }
+
+            input{
+                caret-color: $base_color;
+                background-color: transparent;
+                color: $base_color;
+                outline: none;
+                margin: 0;
+                font: inherit;
+                color: inherit;
+                padding: 0 8px;
+                -webkit-order: 0;
+                -ms-flex-order: 0;
+                order: 0;
+                -webkit-flex: 1 1 auto;
+                -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+                -webkit-align-self: stretch;
+                -ms-flex-item-align: stretch;
+                align-self: stretch;
+                border: none;
+            }
+        }
+    }
+}
