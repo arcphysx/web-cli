@@ -6,18 +6,18 @@ Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    component: () => import(/* webpackChunkName: "index" */ '../views/cli'),
     redirect: '/tab',
+  },
+  {
+    path: '/tab',
+    component: () => import(/* webpackChunkName: "index" */ '../views/cli'),
+    redirect: '/tab/0',
     children: [
       {
-        path: '/tab',
-        redirect: '/tab/0'
-      },
-      {
-        path: '/tab/:id',
+        path: ':id',
         component: () => import(/* webpackChunkName: "screen" */ '../views/cli/Screen'),
       },
-    ],
+    ]
   },
 ]
 

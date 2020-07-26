@@ -35,7 +35,7 @@ export default {
     ...mapGetters(["activeSession"])
   },
   methods: {
-    ...mapActions(["initFirstSession", "inputToActiveSession", "submitToActiveSession", "switchActiveSession"]),
+    ...mapActions(["inputToActiveSession", "submitToActiveSession", "switchActiveSession"]),
     setInputCliFocus(event){
       setTimeout(function() { event.target.focus() }, 0);
     },
