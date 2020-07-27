@@ -42,7 +42,9 @@ export default {
     submitCliCommand(){
       this.submitToActiveSession()
       this.typedText = ""
-      this.$emit('needScroll')
+      this.$nextTick(() => {
+         this.$emit('needScroll')
+      })
     }
   },
   mounted(){
