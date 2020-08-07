@@ -1,7 +1,10 @@
 # Web CLI (_WCLI_)
-_Last Updated: `25/07/2020`_
+_Last Updated: `07/08/2020`_
 
 Simple and fully customizable Command Line Interface web page
+
+## Demo
+You can view the demo on [My Personal Website](https://arcphysx.com/)
 
 ## Features
 * Fully customizable command, even you can create your own command with your own parameter
